@@ -1,0 +1,15 @@
+@media (max-width: 1070px) {
+    .main-logo {
+        background-position: 10px 0;
+    }
+}
+
+@media (min-width: 1300px) {
+    .header-center-attach {
+        left: calc(50% - 200px);
+    }
+    .mordalenta-item-avatar {
+        width: 60px;
+        height: 60px;
+    }
+}

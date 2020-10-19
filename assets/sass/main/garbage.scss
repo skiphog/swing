@@ -1,0 +1,86 @@
+.border-box, .border-box-tip {
+    padding: 5px;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.border-box {
+    border: 1px solid #ccc;
+}
+
+.border-box-tip {
+    border: 1px solid #e1eaff;
+}
+
+#preload-users {
+    display: none;
+    position: absolute;
+    width: 120px;
+    background-color: #f0f0f0;
+    text-align: center;
+    color: #11638c;
+    z-index: 99999;
+    overflow: hidden
+}
+
+#response-preload-users > b {
+    font-style: italic
+}
+
+.tooltip-pointer2 {
+    position: absolute;
+    top: -33px;
+    left: 50px;
+    border-color: #f0f0f0 rgba(0, 0, 0, 0) #f0f0f0 rgba(0, 0, 0, 0);
+    border-width: 0 16px 33px 16px;
+    border-style: solid;
+}
+
+#topmain, #topmeet, #topdiary, #topforum {
+    width: 142px;
+    height: 70px;
+}
+
+#contentcht {
+    overflow: hidden;
+    width: 401px;
+    height: 130px;
+    margin-left: 35px;
+    font-size: 10px;
+    margin-top: 100px;
+    padding: 0;
+}
+
+#topmenu {
+    width: 100%;
+    height: 70px;
+    margin-top: 40px;
+    position: relative
+}
+
+#topban {
+    /*margin-top:10px;*/
+}
+
+#topmain {
+    background-image: url(/img/topmain.png);
+}
+
+#topmeet {
+    background-image: url(/img/topbuc.png);
+}
+
+#topdiary {
+    background-image: url(/img/topdiary.png);
+}
+
+#topforum {
+    background-image: url(/img/topforum.png);
+}
+
+#logo {
+    position: relative;
+    width: 531px;
+    height: 103px;
+    margin-top: 39px;
+    background: url(/img/logo.png) no-repeat;
+}

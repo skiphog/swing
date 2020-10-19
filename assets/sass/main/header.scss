@@ -1,0 +1,117 @@
+@import "../variables";
+
+.header {
+  display: table;
+  position: relative;
+  width: 100%;
+
+  &-section {
+    display: table-cell;
+    vertical-align: top;
+    height: 340px;
+  }
+
+  &-left {
+    width: 436px;
+    background-repeat: no-repeat;
+  }
+
+  &-center {
+    background-repeat: repeat-x;
+    text-align: center;
+
+    &-attach {
+      position: absolute;
+      top: 50px;
+      left: calc(50% - 150px);
+    }
+  }
+
+  &-right {
+    width: 144px;
+    background-repeat: no-repeat;
+  }
+
+  &-chat {
+    overflow: hidden;
+    width: 385px;
+    height: 130px;
+    margin-left: 35px;
+    font-size: 10px;
+    margin-top: 100px;
+  }
+
+  &-enter-chat {
+    margin-left: 85px;
+    margin-top: 40px;
+  }
+}
+
+.main-nav {
+
+  &-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+  }
+
+  &-item {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 18px;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    width: 130px;
+    color: #fff;
+    background: rgba(#039efb, .5);
+    padding: 16px 0;
+    box-shadow: 0 0 6px 2px #b3e1fd;
+    border: 1px solid #b3e1fd;
+    transition: box-shadow .1s;
+    overflow: hidden;
+    line-height: 18px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.5em;
+      height: 100%;
+      background: rgba(#fff, 0.6);
+      transform: translateX(-4em) skewX(-45deg);
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px 4px #b3e1fd;
+      &::before {
+        animation: move-light .7s;
+      }
+    }
+
+    &:active {
+      box-shadow: 0 0 2px 0 #b3e1fd;
+    }
+  }
+}
+
+@keyframes move-light {
+  from {
+    transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    transform: translateX(10em) skewX(-45deg);
+  }
+}
+
+.main-logo {
+  height: 103px;
+  background-image: url(/img/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}

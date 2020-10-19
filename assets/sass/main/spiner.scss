@@ -1,0 +1,43 @@
+.spinner {
+  position: relative;
+  cursor: default;
+  text-shadow: none !important;
+  color: transparent !important;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0s linear, opacity .1s ease;
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin: -0.742857em 0 0 -0.742857em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 500rem;
+  }
+
+  &::before {
+    border: .2em solid rgba(0, 0, 0, .15)
+  }
+
+  &::after {
+    animation: button-spin .6s linear;
+    animation-iteration-count: infinite;
+    border: .2em solid transparent;
+    border-top-color: #fff;
+    box-shadow: 0 0 0 1px transparent
+  }
+}
+
+@keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

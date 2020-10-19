@@ -1,0 +1,32 @@
+@import "../mixins/avatar";
+
+.border-box {
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 5px #ccc;
+}
+
+.shadow-box {
+  border: 1px solid #ececec;
+  background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 0;
+}
+
+.avatar {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 5px #aaa;
+  @include avatar();
+}
+
+.new-imgart, .ug-imgart {
+  max-width: 640px;
+  max-height: 800px;
+}
+
+.ug-imgart {
+  display: block;
+  margin: 5px 0;
+}
+

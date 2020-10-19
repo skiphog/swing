@@ -1,0 +1,266 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+:focus {
+  outline: none !important;
+}
+
+body {
+  padding-top: 100px;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+}
+
+.p-message {
+  margin-bottom: 10px;
+}
+
+.response,
+.p-message {
+  padding: 5px;
+}
+
+.response {
+  height: 250px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+.media-top {
+  padding: 5px 0;
+}
+
+.navbar,
+.border-box,
+.p-message {
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 4px;
+}
+
+.border-box {
+  border: 1px solid #ccc;
+}
+
+.navbar {
+  border-bottom: 1px solid #ccc;
+}
+
+.city-0,
+.moderator-1::before,
+.admin-1::before,
+.moderator-3::before,
+.asist-1::before,
+.asist-2::before {
+  font-weight: 700;
+}
+
+.city-0 {
+  color: #1b09e9;
+}
+
+.moderator-1::before {
+  color: #008000;
+  content: "[Модератор]";
+}
+
+.moderator-3::before {
+  color: #000;
+  content: "[Техподдержка]";
+}
+
+.admin-1::before {
+  color: #f00;
+  content: "[Администратор]";
+}
+
+.asist-1::before {
+  color: #ff6c00;
+  content: "[Организатор]";
+}
+
+.asist-2::before {
+  color: #760092;
+  content: "[Помощник]";
+}
+
+span.real-status-1,
+span.birthday-1 {
+  display: inline-block;
+}
+
+span.real-status-1 {
+  width: 20px;
+  height: 20px;
+  background: url(/img/real.gif) no-repeat center;
+}
+
+span.birthday-1 {
+  width: 19px;
+  height: 23px;
+  background: url(/img/dr.gif) no-repeat center;
+}
+
+span.real-status-1,
+span.birthday-1 {
+  vertical-align: middle;
+}
+
+.vis-1 {
+  background-color: #f0f0f0;
+}
+
+.smile {
+  cursor: pointer;
+}
+
+.p-file {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  opacity: .6;
+}
+
+.p-file:hover,
+p.p-file:focus {
+  opacity: 1;
+}
+
+#file {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  left: 0;
+  font-size: 500px;
+}
+
+.mask {
+  background: #fff url(/img/load_green.gif) no-repeat center;
+}
+
+.mask > div {
+  visibility: hidden;
+}
+
+.message {
+  position: relative;
+}
+
+#text {
+  padding: 6px 30px 6px 12px;
+}
+
+.user-icon {
+  vertical-align: sub !important;
+  background: rgba(132, 154, 138, .2);
+  border-radius: 500px;
+  padding: 2px !important;
+}
+
+.p-message-info-0::after {
+  display: inline-block;
+  content: 'Не прочитано';
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  background-color: #d9534f;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  padding: .2em .6em .3em;
+  margin-left: 5px;
+}
+
+.privat-img {
+  max-width: 100%;
+  max-height: 300px;
+  padding: 2px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 4px;
+}
+
+.privat-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  width: 200px;
+  height: 220px;
+  overflow: hidden;
+  margin: 5px 0;
+}
+
+.privat-box-img {
+  width: 150%;
+  flex: none;
+}
+
+.privat-box-shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 28px;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+.smile-hud {
+  position: absolute;
+  top: -120px;
+  left: 95px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  z-index: 9999;
+}
+.wrapper-smile {
+  width: 320px;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 5px;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    transform: rotate(-90deg);
+  }
+  &::before {
+    left: -13px;
+    border-color: #CCC transparent;
+  }
+  &::after {
+    left: -12px;
+    border-color: #fff transparent;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

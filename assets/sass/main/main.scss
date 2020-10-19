@@ -1,0 +1,243 @@
+@import "../variables";
+@import "../mixins/clearfix";
+
+:focus {
+  outline: none !important;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 960px;
+  overflow-y: scroll;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: left;
+  background-color: $body-bg;
+}
+
+a, a:focus, a:visited, a:active {
+  color: $link-color;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+}
+
+.h1, h1 {
+  font-size: 26px;
+}
+
+.h2, h2 {
+  font-size: 20px;
+}
+
+.h3, h3 {
+  font-size: 18px;
+}
+
+.h4, h4 {
+  font-size: 16px;
+}
+
+.h5, h5 {
+  font-size: 14px;
+}
+
+.h6, h6 {
+  font-size: 12px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+  vertical-align: middle;
+
+  &.emojione {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1.8em !important;
+    width: 1.8em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important
+  }
+}
+
+label {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.main {
+  display: table;
+  width: 100%;
+  position: relative;
+  background-image: url(/img/right.jpg);
+  background-repeat: repeat-y;
+  background-position: right;
+
+  &-row {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  &-left {
+    width: 233px;
+    max-width: 233px;
+    background-color: $main-bg-color;
+    border-right: 1px solid #e4e4e5;
+
+    &-wrapper {
+      width: 232px;
+      min-width: 232px;
+      overflow: hidden;
+    }
+  }
+
+  &-content {
+    padding: 10px 43px 10px 10px;
+  }
+
+  @include clearfix();
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/*.ba::before, .bm-1::before, .bm-3::before, .bs-1::before, .bs-2::before,
+.c-1, .m-1, .m-3, .a-1, .s-1, .s-2,*/
+.cnt, .bold {
+  font-weight: 700;
+}
+
+a.cs-1, a.cs-1:focus, a.cs-1:visited, a.cs-1:active,
+.c-1,
+.blue {
+  color: #1b09e9
+}
+
+.m-1,
+.green,
+.bm-1::before {
+  color: #008000 !important;
+}
+
+.red,
+.delete:hover,
+.a-1,
+.ba-1::before {
+  color: #f00 !important;
+}
+
+.m-3,
+.bm-3::before {
+  color: #000 !important
+}
+
+.s-1,
+.bs-1::before {
+  color: #ff6c00 !important;
+}
+
+.s-2,
+.bs-2::before {
+  color: #760092 !important;
+}
+
+.bm-1::before {
+  content: "[Модератор]"
+}
+
+.bm-3::before {
+  content: "[Техподдержка]"
+}
+
+.ba-1::before {
+  content: "[Организатор]"
+}
+
+.bs-1::before {
+  content: "[Администратор]"
+}
+
+.bs-2::before {
+  content: "[Помошник]"
+}
+
+.count-mes {
+  color: #961313;
+}
+
+.count-nof {
+  color: #1f7900;
+}
+
+.count-guest {
+  color: #ff6829;
+}
+
+.delete {
+  color: #ccc;
+}
+
+.user-icon {
+  background: rgba(132, 154, 138, .2);
+  padding: 1px !important;
+}
+
+.hover-tip {
+  white-space: nowrap !important;
+
+  & > * {
+    vertical-align: middle;
+  }
+}

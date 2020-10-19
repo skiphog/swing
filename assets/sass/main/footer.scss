@@ -1,0 +1,16 @@
+@import "../variables";
+
+.footer {
+  padding: 20px;
+  background-color: $main-bg-color;
+  border-top: 2px solid #999;
+
+  &-content {
+    text-align: center;
+    font-size: 90%;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
