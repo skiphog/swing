@@ -1,6 +1,6 @@
 <?php
 /**
- * @var \Crudch\View\View $this
+ * @var \System\View\View $this
  */
 $dbh = db();
 $auth = auth();
@@ -56,7 +56,7 @@ $auth = auth();
                     $sql = 'select u.id, u.birthday, u.pic1, u.photo_visibility,
    u.real_status, u.visibility, u.hot_time, u.regdate,
    u.vip_time, u.now_status, u.hot_text,
-   u.vipsmile, u.admin, u.moderator, u.city,
+   u.vipsmile, u.admin, u.moderator, u.city,u.region_id,
    u.login, u.fname, u.gender, u.about, u.job,
    ut.last_view
 from users u
@@ -85,7 +85,7 @@ limit 5';
                     $sql = 'select u.id, u.birthday, u.pic1, u.photo_visibility,
    u.real_status, u.visibility, u.hot_time, u.regdate,
    u.vip_time, u.now_status, u.hot_text,
-   u.vipsmile, u.admin, u.moderator, u.city,
+   u.vipsmile, u.admin, u.moderator, u.city,u.region_id,
    u.login, u.fname, u.gender, u.about, u.job,
    ut.last_view
 from users u
@@ -109,7 +109,7 @@ limit 5';
                     $sql = 'select u.id, u.birthday, u.pic1, u.photo_visibility,
    u.real_status, u.visibility, u.hot_time, u.regdate,
    u.vip_time, u.now_status, u.hot_text,
-   u.vipsmile, u.admin, u.moderator, u.city,
+   u.vipsmile, u.admin, u.moderator, u.city,u.region_id,
    u.login, u.fname, u.gender, u.about, u.job,
    ut.last_view
 from users u

@@ -20,7 +20,7 @@ function displayUser(App\Models\Users\Auth $myrow, App\Models\Users\RowUser $use
                 <?php else: ?>
                     <div style="background:rgba(255, 255, 255, 0.1)">
                         <?php echo \App\Arrays\Genders::$old[$user->gender]; ?> на сайте<br>
-                        <b><?php echo $user->last_view->getHumansPerson(); ?></b>
+                        <b><?php echo $user->last_view->humans(); ?></b>
                     </div>
                 <?php endif; ?>
             </div>
@@ -33,8 +33,8 @@ function displayUser(App\Models\Users\Auth $myrow, App\Models\Users\RowUser $use
                 <?php endif; ?>
 
                 <?php if ($user->isVip()): ?>
-                    <a href="<?php echo url('/viewdiary_132'); ?>">
-                        <img src="<?php echo \App\Arrays\VipSmiles::$array[$user->vipsmile]; ?>">
+                    <a href="<?php echo url('/diaries/132'); ?>">
+                        <img src="<?php echo \App\Arrays\VipSmiles::$array[$user->vipsmile]; ?>" alt>
                     </a><?php endif; ?>
 
                 <?php if ($user->isBirthday()): ?>
@@ -48,12 +48,12 @@ function displayUser(App\Models\Users\Auth $myrow, App\Models\Users\RowUser $use
                 <a href="/user/<?php echo $user->id; ?>">
                     <span style="font-weight:700"
                             class="m-<?php echo $user->moderator; ?> a-<?php echo $user->admin; ?>">
-                        <?php echo html($user->login); ?>
+                        <?php echo e($user->login); ?>
                     </span>
                 </a>
-                <?php echo $user->birthday->getHumansShort(); ?> /
-                <span class="u-city-<?php echo (int)(mb_strtolower($myrow->city) === mb_strtolower($user->city)); ?>">
-                    <strong><?php echo html($user->city); ?></strong>
+                <?php echo $user->birthday->age(); ?> /
+                <span class="u-city-<?php echo regionComp($myrow->region_id, $user->region_id); ?>">
+                    <strong><?php echo e($user->city); ?></strong>
                 </span>
 
                 <?php if($myrow->id !== $user->id && $myrow->isUser()) : ?>
@@ -70,17 +70,17 @@ function displayUser(App\Models\Users\Auth $myrow, App\Models\Users\RowUser $use
             </div>
 
             <div style="margin:5px 0">
-                <?php echo html(limit($user->about, 160, ' ...')); ?>
+                <?php echo e(limit($user->about, 160, ' ...')); ?>
             </div>
 
             <?php if ($user->isHot()): ?>
                 <div class="border-box" style="background:#fff;font-size:16px;padding:5px;">
                     <span style="color:#f00;">Срочно познакомимся:</span>
-                    <?php echo html(limit($user->hot_text, 250, ' ...')); ?>
+                    <?php echo e(limit($user->hot_text, 250, ' ...')); ?>
                 </div>
             <?php elseif ($user->isNowStatus()): ?>
                 <div>
-                    <b>Настроение</b>: <?php echo html(limit($user->now_status, 250, ' ...')); ?>
+                    <b>Настроение</b>: <?php echo e(limit($user->now_status, 250, ' ...')); ?>
                 </div>
             <?php endif; ?></td>
     </tr>

@@ -28,9 +28,9 @@ use System\Date\SwDate;
 class RowUser extends User
 {
     /**
-     * @var bool
+     * @var mixed
      */
-    protected ?bool $hot;
+    protected $hot;
 
     /**
      * @return string

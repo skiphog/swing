@@ -28,8 +28,9 @@
       "System\\": "system/"
     },
     "files": [
+      "system/Helpers/functions.php",
       "app/Support/functions.php",
-      "system/Helpers/functions.php"
+      "app/Support/displayUser.php"
     ]
   },
   "config": {
