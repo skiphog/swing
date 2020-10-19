@@ -53,7 +53,7 @@ class App extends Container
      *
      * @noinspection PhpIncludeInspection
      */
-    protected function setRegistry(): void
+    public function setRegistry(): void
     {
         $user_registry = require root_path('/app/registry.php');
 
